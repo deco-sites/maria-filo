@@ -65,7 +65,7 @@ export interface Props {
 const loader = async (
   props: Props,
   _req: Request,
-): Promise<LegacyProduct[]> => {
+): Promise<{ products: LegacyProduct[] }> => {
   const vcsDeprecated = getClient();
 
   if (!props.collection) {
@@ -110,7 +110,9 @@ const loader = async (
     )
     : vtexProducts;
 
-  return partialProducts as LegacyProduct[];
+    return {
+    products: partialProducts as LegacyProduct[],
+  };
 };
 
 export default loader;

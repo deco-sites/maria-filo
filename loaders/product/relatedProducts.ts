@@ -32,7 +32,7 @@ export interface Props {
 async function loader(
   props: Props,
   req: Request,
-): Promise<LegacyProduct[] | null> {
+): Promise<{ products: LegacyProduct[] } | null> {
   const vcsDeprecated = getClient();
   const {
     crossSelling = "similars",
@@ -105,10 +105,10 @@ async function loader(
 
   const relatedProducts = relatedProductsResults
     .filter(
-      (result): result is PromiseFulfilledResult<LegacyProduct[]> =>
+      (result): result is PromiseFulfilledResult<{ products: LegacyProduct[] }> =>
         result.status === "fulfilled",
     )
-    .flatMap((result) => result.value)
+    .flatMap((result) => result.value.products)
     .filter((x): x is LegacyProduct => Boolean(x));
 
   relatedProductsResults
@@ -120,7 +120,9 @@ async function loader(
       );
     });
 
-  return relatedProducts;
+  return {
+    products: relatedProducts,
+  };
 }
 
 export default loader;

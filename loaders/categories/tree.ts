@@ -21,12 +21,14 @@ export default async function loader(
   { categoryLevels }: Props,
   _req: Request,
   ctx: AppContext,
-): Promise<Category | Category[]> {
+  ): Promise<{ categories: Category | Category[] }> {
   const vcs = getClient();
 
-  return await vcs
-    ["GET /api/catalog_system/pub/category/tree/:level"]({
-      level: categoryLevels ?? 1,
-    }, { ...STALE, headers: withSegmentCookie(getSegmentFromBag(ctx)) })
+  // deno-lint-ignore no-explicit-any
+  const categories = await vcs["GET /api/catalog_system/pub/category/tree/:level"]({
+    level: categoryLevels ?? 1,
+  }, { ...STALE, headers: withSegmentCookie(getSegmentFromBag(ctx)) })
     .then((res) => res.json());
+
+  return { categories };
 }

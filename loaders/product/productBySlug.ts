@@ -57,7 +57,7 @@ async function loader(
   props: Props,
   req: Request,
   ctx: AppContext,
-): Promise<LegacyProduct & { similars: LegacyProduct[] | null } | null> {
+): Promise<{ product: LegacyProduct; similars: LegacyProduct[] | null } | null> {
   const vcsDeprecated = getClient();
   const { slug, select } = props;
 
@@ -96,8 +96,8 @@ async function loader(
     : product;
 
   return {
-    ...partialProduct,
-    similars,
+    product: partialProduct as LegacyProduct,
+    similars: similars as LegacyProduct[] | null,
   };
 }
 

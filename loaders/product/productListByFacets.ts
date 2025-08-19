@@ -111,7 +111,9 @@ const loader = async (
     )
     : vtexProducts;
 
-  return partialProducts as LegacyProduct[];
+  return {
+    products: partialProducts as LegacyProduct[],
+  };
 };
 
 export default loader;
