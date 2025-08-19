@@ -1,0 +1,10 @@
+{
+  "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+  "props": {
+    "sort": "price:desc",
+    "fuzzy": "automatic",
+    "simulationBehavior": "default",
+    "query": "vestido",
+    "count": 2
+  }
+}

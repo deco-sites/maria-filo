@@ -8,7 +8,18 @@ export default defineConfig({
     manifest,
     htmx: true,
     useServer: (deco, hono) => {
-      hono.use("/*", mcpServer(deco));
+      hono.use("/*", mcpServer(deco, {
+        include: [
+          "site/loaders/product/productListByFacets.ts",
+          "site/loaders/product/productListBySkuIds.ts",
+          "site/loaders/product/productListByTerm.ts",
+          "site/loaders/product/productListByProductIds.ts",
+          "site/loaders/product/productListByCollection.ts",
+          "site/loaders/product/productBySlug.ts",
+          "site/loaders/product/relatedProducts.ts",
+          "site/loaders/categories/tree.ts",
+        ],
+      }));
     },
   }),
 });

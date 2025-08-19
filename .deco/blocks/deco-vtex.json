@@ -1,0 +1,11 @@
+{
+  "__resolveType": "site/apps/deco/vtex.ts",
+  "salesChannel": "1",
+  "setRefreshToken": false,
+  "defaultSegment": {
+    "channelPrivacy": "public"
+  },
+  "platform": "vtex",
+  "account": "mariafilo",
+  "publicUrl": "https://secure.mariafilo.com.br/"
+}
