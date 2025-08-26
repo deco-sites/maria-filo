@@ -1,0 +1,9 @@
+{
+  "__resolveType": "site/loaders/product/productListByCategory.ts",
+  "sort": "price:desc",
+  "select": [
+    "productName"
+  ],
+  "category": "/loja/roupas/blusa",
+  "count": 10
+}

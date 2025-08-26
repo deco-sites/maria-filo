@@ -1,7 +1,17 @@
 {
   "data": {
     "__resolveType": "shopify/loaders/ProductListingPage.ts",
-    "count": 12
+    "count": 12,
+    "@type": "ProductListingPage",
+    "breadcrumb": {
+      "@type": "BreadcrumbList"
+    },
+    "filters": [],
+    "products": [],
+    "pageInfo": {
+      "pageTypes": []
+    },
+    "sortOptions": []
   },
   "extensions": [],
   "__resolveType": "commerce/loaders/product/extensions/listingPage.ts"

@@ -13,14 +13,15 @@ import * as $$$1 from "./loaders/categories/tree.ts";
 import * as $$$2 from "./loaders/icons.ts";
 import * as $$$3 from "./loaders/minicart.ts";
 import * as $$$4 from "./loaders/product/productBySlug.ts";
-import * as $$$5 from "./loaders/product/productListByCollection.ts";
-import * as $$$6 from "./loaders/product/productListByFacets.ts";
-import * as $$$7 from "./loaders/product/productListByProductIds.ts";
-import * as $$$8 from "./loaders/product/productListBySkuIds.ts";
-import * as $$$9 from "./loaders/product/productListByTerm.ts";
-import * as $$$10 from "./loaders/product/relatedProducts.ts";
-import * as $$$11 from "./loaders/user.ts";
-import * as $$$12 from "./loaders/wishlist.ts";
+import * as $$$5 from "./loaders/product/productListByCategory.ts";
+import * as $$$6 from "./loaders/product/productListByCollection.ts";
+import * as $$$7 from "./loaders/product/productListByFacets.ts";
+import * as $$$8 from "./loaders/product/productListByProductIds.ts";
+import * as $$$9 from "./loaders/product/productListBySkuIds.ts";
+import * as $$$10 from "./loaders/product/productListByTerm.ts";
+import * as $$$11 from "./loaders/product/relatedProducts.ts";
+import * as $$$12 from "./loaders/user.ts";
+import * as $$$13 from "./loaders/wishlist.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$2 from "./sections/Category/CategoryGrid.tsx";
@@ -57,14 +58,15 @@ const manifest = {
     "site/loaders/icons.ts": $$$2,
     "site/loaders/minicart.ts": $$$3,
     "site/loaders/product/productBySlug.ts": $$$4,
-    "site/loaders/product/productListByCollection.ts": $$$5,
-    "site/loaders/product/productListByFacets.ts": $$$6,
-    "site/loaders/product/productListByProductIds.ts": $$$7,
-    "site/loaders/product/productListBySkuIds.ts": $$$8,
-    "site/loaders/product/productListByTerm.ts": $$$9,
-    "site/loaders/product/relatedProducts.ts": $$$10,
-    "site/loaders/user.ts": $$$11,
-    "site/loaders/wishlist.ts": $$$12,
+    "site/loaders/product/productListByCategory.ts": $$$5,
+    "site/loaders/product/productListByCollection.ts": $$$6,
+    "site/loaders/product/productListByFacets.ts": $$$7,
+    "site/loaders/product/productListByProductIds.ts": $$$8,
+    "site/loaders/product/productListBySkuIds.ts": $$$9,
+    "site/loaders/product/productListByTerm.ts": $$$10,
+    "site/loaders/product/relatedProducts.ts": $$$11,
+    "site/loaders/user.ts": $$$12,
+    "site/loaders/wishlist.ts": $$$13,
   },
   "sections": {
     "site/sections/Animation/Animation.tsx": $$$$$$0,
