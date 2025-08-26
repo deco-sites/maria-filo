@@ -18,6 +18,7 @@ export default defineConfig({
           "site/loaders/product/productBySlug.ts",
           "site/loaders/product/relatedProducts.ts",
           "site/loaders/categories/tree.ts",
+          "site/loaders/product/productListByCategory.ts",
         ],
       }));
     },
